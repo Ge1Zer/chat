@@ -1,12 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import './constant.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "mobx-react";
+
+import menu from './store/menu'
+import profile from './store/profile'
+import room from './store/room'
+import my from "./store/my";
+
+let store = {
+    menu,profile,room, my
+}
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <Provider store={store}>
+              <App />
+          </Provider>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

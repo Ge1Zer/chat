@@ -1,0 +1,454 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 18,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "football"
+        },
+        {
+          "id": 2,
+          "roomId": 3,
+          "name": "sleeping"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 4,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Genua Fetuchini",
+          "status": true
+        },
+        {
+          "id": 1,
+          "profileId": 5,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Beekoze Witula",
+          "status": true
+        },
+        {
+          "id": 1,
+          "profileId": 6,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Bola Chigo",
+          "status": true
+        },
+        {
+          "id": 1,
+          "profileId": 7,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Sevi Kulo",
+          "status": true
+        }
+      ],
+      "status": true,
+      "email": "mask@grail.pom",
+      "skype": "Maskirovka",
+      "facebook": "http//facebook.com/maska",
+      "instagram": "http//instagram.com/maska",
+      "twitter": "http//twitter.com/maska",
+      "inlink": "http//in-link.com/maska"
+    },
+    {
+      "id": 2,
+      "name": "Uwenika Ritool",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 50,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "female"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 2,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Ume",
+          "status": false
+        }
+      ],
+      "status": true,
+      "email": "Uwenika@grail.pom",
+      "skype": "Uwenika",
+      "facebook": "http//facebook.com/Uwenika",
+      "instagram": "http//instagram.com/Uwenika",
+      "twitter": "http//twitter.com/Uwenika",
+      "inlink": "http//in-link.com/Uwenika"
+    },
+    {
+      "id": 3,
+      "name": "Beliz Fuego",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 30,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "female"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 2,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Ume",
+          "status": false
+        }
+      ],
+      "status": true,
+      "email": "Beliz@grail.pom",
+      "skype": "Beliz",
+      "facebook": "http//facebook.com/Beliz",
+      "instagram": "http//instagram.com/Beliz",
+      "twitter": "http//twitter.com/Beliz",
+      "inlink": "http//in-link.com/Beliz"
+    },
+    {
+      "id": 4,
+      "name": "Genua Fetuchini",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 19,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "female"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 2,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Ume",
+          "status": false
+        }
+      ],
+      "status": true,
+      "email": "Genua@grail.pom",
+      "skype": "Genua",
+      "facebook": "http//facebook.com/Genua",
+      "instagram": "http//instagram.com/Genua",
+      "twitter": "http//twitter.com/Genua",
+      "inlink": "http//in-link.com/Genua"
+    },
+    {
+      "id": 5,
+      "name": "Beekoze Witula",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 21,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "female"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 2,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Ume",
+          "status": false
+        }
+      ],
+      "status": true,
+      "email": "Beekoze@grail.pom",
+      "skype": "Beekoze",
+      "facebook": "http//facebook.com/Beekoze",
+      "instagram": "http//instagram.com/Beekoze",
+      "twitter": "http//twitter.com/Beekoze",
+      "inlink": "http//in-link.com/Beekoze"
+    },
+    {
+      "id": 6,
+      "name": "Bola Chigo",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 29,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "female"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 2,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Ume",
+          "status": false
+        }
+      ],
+      "status": true,
+      "email": "Bola@grail.pom",
+      "skype": "Bola",
+      "facebook": "http//facebook.com/Bola",
+      "instagram": "http//instagram.com/Bola",
+      "twitter": "http//twitter.com/Bola",
+      "inlink": "http//in-link.com/Bola"
+    },
+    {
+      "id": 7,
+      "name": "Sevi Kulo",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "age": 50,
+      "rooms": [
+        {
+          "id": 1,
+          "roomId": 1,
+          "name": "football"
+        },
+        {
+          "id": 2,
+          "roomId": 3,
+          "name": "sleeping"
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "profileId": 1,
+          "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+          "name": "Mask",
+          "status": true
+        }
+      ],
+      "status": true,
+      "email": "Sevi@grail.pom",
+      "skype": "Sevi",
+      "facebook": "http//facebook.com/Sevi",
+      "instagram": "http//instagram.com/Sevi",
+      "twitter": "http//twitter.com/Sevi",
+      "inlink": "http//in-link.com/Sevi"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "football",
+      "totalMessage": 3,
+      "totalUsers": 2
+    },
+    {
+      "id": 2,
+      "name": "skating",
+      "totalMessage": 5,
+      "totalUsers": 2
+    },
+    {
+      "id": 3,
+      "name": "sleeping",
+      "totalMessage": 0,
+      "totalUsers": 2
+    }
+  ],
+  "messages": [
+    {
+      "roomId": 1,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 1,
+      "text": "It`s the first comment ",
+      "listPhoto": [
+        {
+          "id": 1,
+          "src": "https://www.zastavki.com/pictures/640x480/2019Funny_wallpapers_Multicolored_cloud_unicorn_on_a_black_background_135683_29.jpg"
+        }
+      ],
+      "date": {
+        "day": 15,
+        "month": 8,
+        "year": 2020,
+        "hours": 0,
+        "minute": 57,
+        "second": 23
+      },
+      "id": 1
+    },
+    {
+      "roomId": 1,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 2,
+      "text": "This is the second comment",
+      "listPhoto": [
+        {
+          "id": 1,
+          "src": "https://s1.1zoom.me/b5050/112/Anemones_Closeup_Black_background_Violet_569641_3840x2400.jpg"
+        },
+        {
+          "id": 2,
+          "src": "https://i.pinimg.com/originals/20/00/e7/2000e7205956f3cba1b744a7ce98d620.jpg"
+        }
+      ],
+      "date": {
+        "day": 19,
+        "month": 8,
+        "year": 2020,
+        "hours": 15,
+        "minute": 49,
+        "second": 36
+      },
+      "id": 2
+    },
+    {
+      "roomId": 1,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 1,
+      "text": "fsdfsd",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 4,
+        "second": 1
+      },
+      "id": 3
+    },
+    {
+      "roomId": 2,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 1,
+      "text": "ertert",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 4,
+        "second": 6
+      },
+      "id": 4
+    },
+    {
+      "roomId": 2,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 2,
+      "text": "ывавыа",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 6,
+        "second": 48
+      },
+      "id": 5
+    },
+    {
+      "roomId": 2,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 3,
+      "text": "ываыв",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 9,
+        "second": 10
+      },
+      "id": 6
+    },
+    {
+      "roomId": 1,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 2,
+      "text": "авпвапавпвапвапвап",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 9,
+        "second": 17
+      },
+      "id": 7
+    },
+    {
+      "roomId": 2,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 4,
+      "text": "11111111111111",
+      "listPhoto": [],
+      "date": {
+        "day": 20,
+        "month": 8,
+        "year": 2020,
+        "hours": 10,
+        "minute": 9,
+        "second": 26
+      },
+      "id": 8
+    },
+    {
+      "roomId": 1,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 3,
+      "text": "ываыва",
+      "listPhoto": [],
+      "date": {
+        "day": 21,
+        "month": 8,
+        "year": 2020,
+        "hours": 1,
+        "minute": 9,
+        "second": 34
+      },
+      "id": 9
+    },
+    {
+      "roomId": 2,
+      "profileId": 1,
+      "name": "Mask",
+      "avatar": "https://ozon-st.cdn.ngenix.net/s3/multimedia-9/6004686921.jpg",
+      "number": 5,
+      "text": "wewew",
+      "listPhoto": [],
+      "date": {
+        "day": 21,
+        "month": 8,
+        "year": 2020,
+        "hours": 2,
+        "minute": 49,
+        "second": 54
+      },
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+$MyWhite:#FFFFFF;
+$MyGray:#919191;
+$MyBlue:#3577EF;
+
+@mixin flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:flex-start,$a-c:flex-start) {
+  display: flex;
+  flex-direction: $f-d;
+  flex-wrap:$f-w;
+  justify-content: $j-c;
+  align-items: $a-i;
+  align-content: $a-c;
+}
+@mixin fontAllPage($f-sty:normal,$f-w:normal,$f-size:medium,$f-str:normal,$f-s-a:none,$l-h:normal, $let-sp:0){
+  font-family: 'Lato', sans-serif;
+  font-style: $f-sty;
+  font-weight: $f-w;
+  font-size: $f-size+px;
+  font-stretch: $f-str;
+  font-size-adjust: $f-s-a;
+  letter-spacing: $let-sp+px;
+  line-height: $l-h+px;
+}
+@mixin myAnimation($a-name:none,$a-dura:0s,$a-tim-fu:linear,$a-repeat:1,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:none){
+  animation-name:$a-name;
+  animation-duration:$a-dura;
+  animation-timing-function:$a-tim-fu;
+  animation-iteration-count:$a-repeat;
+  animation-direction:$a-go-back;
+  animation-play-state:$a-pause;
+  animation-delay:$a-delay+s;
+  animation-fill-mode:$a-fill;
+}
+
+.App{
+  @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+  height: 100%;
+}
+//===============menu==========>
+.menu_container{
+  flex:0 1 280px;
+  @include flexible ($f-d:column,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+  background-image: linear-gradient(to bottom, #535253, #4c4a4d, #444347, #3c3c42, #33353d, #2e3139, #2a2e35, #252a31, #24272d, #222529, #212226, #1f2022);
+  min-width: 280px;
+  padding: 35px 27px 15px 27px;
+  color: $MyWhite;
+}
+.menu_list_settings_container{
+  flex: 1 1 71px;
+  margin: 0 0 32px 0;
+  @include flexible ($f-d:column,$f-w:nowrap,$j-c:space-between,$a-i:normal,$a-c:flex-start);
+
+  &>.menu_list_settings_panel_1{
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:space-between,$a-i:center,$a-c:flex-start);
+    &>div:nth-child(1){
+    @include fontAllPage($f-sty:normal,$f-w:400,$f-size:20,$f-str:normal,$f-s-a:none,$l-h:24);
+      color: $MyWhite;
+    }
+  }
+  &>.menu_list_settings_panel_2{
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:left,$a-i:center,$a-c:flex-start);
+    @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:14,$f-str:normal,$f-s-a:none,$l-h:17);
+
+    &>img{
+      margin: 0 12px 0 0;
+    }
+  }
+}
+.menu_list_rooms_container{
+  flex: 1 1 45%;
+  margin: 0 0 17.5px 0;
+  
+  &>.menu_title_rooms{
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:space-between,$a-i:center,$a-c:flex-start);
+    @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:12,$f-str:normal,$f-s-a:none,$l-h:14);
+    text-transform: uppercase;
+    margin: 0 0 14px 0;
+  }
+  &>.menu_list_rooms{
+    @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:14,$f-str:normal,$f-s-a:none,$l-h:17);
+
+    &>div {
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:flex-start);
+      transition:0.4s;
+      border-radius: 3px;
+      height: 30px;
+      padding: 3px 0 0 0;
+
+      &:hover{
+        background: $MyGray;
+        mix-blend-mode: normal;
+        transition:0.5s;
+        &>a{
+          color: $MyWhite;
+        }
+      }
+      &>a{
+        text-decoration: none;
+        color: $MyGray;
+        margin: 4px 0 9px 14px;
+      }
+    }
+  }
+}
+.menu_list_friends_container{
+  flex: 1 1 45%;
+
+  &>.menu_title_friends{
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:space-between,$a-i:center,$a-c:flex-start);
+    @include fontAllPage($f-sty:normal,$f-w:bold,$f-size:12,$f-str:normal,$f-s-a:none,$l-h:14);
+    text-transform: uppercase;
+    color: $MyGray;
+  }
+  &>.menu_list_friends {
+    @include flexible ($f-d:column,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+
+    & > .menu_item_friends {
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:flex-start);
+
+      margin: 12px 0 12px 0;
+      height: 32px;
+      transition:0.5s;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover{
+        background: $MyGray;
+        transition:0.5s;
+        color: $MyWhite;
+        &>div:nth-child(1) {
+          &>img {
+            border: rgba(0,0,0,0.2) 0.5px solid;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      &>div{}
+      &>div:nth-child(1){
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:flex-start);
+        margin: 0 7.5px 0 0;
+        &>img{
+          border: 1px solid transparent;
+        }
+      }
+      &>div:nth-child(2){
+        margin: 0 14px 0 0;
+        &>img{
+          width: 32px;
+          border-radius: 5px;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+//==============================>
+
+//===============profile==========>
+.profile_container {
+  flex: 0 1 20%;
+  background: rgba(207, 211, 215, 1);
+  min-width: 201px;
+
+  & > div {
+    &:nth-child(1){
+      margin-bottom: 10px;
+    }
+    &:nth-child(2) {
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:flex-start);
+      @include fontAllPage($f-sty:normal,$f-w:bold,$f-size:16,$f-str:normal,$f-s-a:none,$l-h:19);
+      margin: 0 20px 10px 19.5px;
+
+      & > div {
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:center,$a-i:normal,$a-c:flex-start);
+
+        &:nth-child(2) {
+          margin: 0 0 0 5.5px;
+        }
+        & > img {
+          margin: 10% 0 0 0;
+        }
+      }
+    }
+    &:nth-child(3) {
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+      @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:12,$f-str:normal,$f-s-a:none,$l-h:14);
+
+      margin: 0 20px 20px 19.5px;
+      color: #5F6164;
+    }
+    &:nth-child(4){
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+      margin: 0 20px 18.5px 14.5px;
+
+      &>div{
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:space-around,$a-i:center,$a-c:flex-start);
+        margin: 0 5px;
+        border-radius: 50%;
+        background: $MyWhite;
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &:nth-child(5) {
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:space-around,$a-i:center,$a-c:flex-start);
+      @include fontAllPage($f-sty:normal,$f-w:700,$f-size:13,$f-str:normal,$f-s-a:none,$l-h:16);
+      height: 25px;
+      margin: 0 20px 14px 20px;
+      text-align: center;
+      position: relative;
+
+      &>div{
+        border-radius: 4px;
+      }
+      &>div:nth-child(1){
+        flex:1 1 90%;
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:center,$a-i:center,$a-c:center);
+        height: 100%;
+        background: $MyBlue;
+
+        &>button{
+          @include fontAllPage($f-sty:normal,$f-w:700,$f-size:13,$f-str:normal,$f-s-a:none,$l-h:16,$let-sp:0);
+          width: 100%;
+          background: rgba(0,0,0,0);
+          text-align: center;
+          color: $MyWhite;
+        }
+      }
+      &>div:nth-child(2){
+        flex:1 1 25px;
+        height: 100%;
+        background: #3577EF;
+        margin: 0 0 0 2.5px;
+        padding: 9.5px 8px;
+      }
+      &>div:nth-child(3){
+        position: absolute;
+        z-index: 1;
+        top:100%;
+        width: 100%;
+        margin: 3px 0 0 0;
+        background: $MyWhite;
+      }
+    }
+    &:nth-child(6){
+      margin: 0 20px 0 19.5px;
+      &>div{
+        margin: 10px 0;
+        &>div{
+          margin: 2px 0;
+          &:nth-child(1){
+            @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:12,$f-str:normal,$f-s-a:none,$l-h:14);
+            color: $MyGray;
+          }
+        }
+      }
+    }
+  }
+
+}
+//===========================>
+
+//============room==============>
+.room_container{
+  flex:1 1 auto;
+  @include flexible ($f-d:column,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+
+  &>.room_tittle{
+    flex:1 1 5%;
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+    min-height: 70px;
+    padding: 31px 0 14px 24px;
+    border-bottom:1px solid rgba(0,0,0,0.3);
+    &>div{
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:center);
+      &>div{
+          @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:center);
+      }
+    }
+    &>div:nth-child(1){
+      flex: 1 1 40%;
+      @include fontAllPage($f-sty:normal,$f-w:bold,$f-size:20,$f-str:normal,$f-s-a:none,$l-h:24);
+      &>div:nth-child(2){
+        margin: 0 0 0 6px;
+      }
+    }
+    &>div:nth-child(2){
+      color:$MyGray;
+      &>div:nth-child(2){
+        margin: 0 25px 0 7px;
+      }
+    }
+    &>div:nth-child(3){
+      background: rgba(0, 0, 0, 0.0001);
+      border: 0.5px solid rgba(0, 0, 0, 0.24);
+      border-radius: 2px;
+      padding: 0 0 0 17px;
+      margin: 0 25px 0 0;
+
+      &>div:nth-child(1){
+        &>input{
+          @include fontAllPage($f-sty:normal,$f-w:400,$f-size:14,$f-str:normal,$f-s-a:none,$l-h:17);
+          text-align: left;
+        }
+      }
+      &>div:nth-child(2){
+        &>img{
+          margin: 8px;
+        }
+      }
+    }
+    &>div:nth-child(4){
+      &>div{
+        margin: 0 25px 0 0;
+      }
+    }
+  }
+  &>.room_view_list_message{
+    flex:1 1 80%;
+    overflow-y: auto;
+    &>div:nth-child(1){
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      &>p{
+        width: fit-content;
+        margin: auto;
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+          &:before{
+            @include myAnimation($a-name:bee,$a-dura:1s,$a-tim-fu:ease-in,$a-repeat:1,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:forwards);
+          }
+          &:after{
+            @include myAnimation($a-name:aft,$a-dura:1s,$a-tim-fu:ease-in,$a-repeat:1,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:forwards);
+          }
+        }
+      }
+      &>p:before{
+        content: '';
+        position: absolute;
+        border: 1px solid $MyGray;
+        top:50%;
+        left: 110%;
+        width: 100%;
+        @include myAnimation($a-name:beeBack,$a-dura:1s,$a-tim-fu:ease-in,$a-repeat:1,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:forwards);
+
+      }
+      &>p:after{
+        content: '';
+        position: absolute;
+        border: 1px solid $MyGray;
+        top:50%;
+        right: 110%;
+        width: 100%;
+        @include myAnimation($a-name:aftBack,$a-dura:1s,$a-tim-fu:ease-in,$a-repeat:1,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:forwards);
+
+      }
+    }
+    &>.room_view_item_message{
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+      padding: 0 0 0 10px;
+      border-bottom: 1px solid rgba(100,100,100,0.2);
+      min-height: 74px;
+
+      &>.avaUser{
+        @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+        margin: 18px 0 0 0;
+        &>img{
+          border-radius: 5px;
+          border: 1px solid #000;
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &>.textMess{
+        @include flexible ($f-d:column,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+        width: 100%;
+        padding: 18px 0 0 10px;
+
+        &>div:nth-child(1){
+          @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+          @include fontAllPage($f-sty:normal,$f-w:normal,$f-size:12,$f-str:normal,$f-s-a:none,$l-h:14);
+
+          &>div:nth-child(1){
+            font-weight: bold;
+            margin: 0 9px 0 0;
+          }
+          &>div:nth-child(2){
+            color: $MyGray;
+          }
+        }
+        &>div:nth-child(2){
+          @include fontAllPage($f-sty:normal,$f-w:400,$f-size:13,$f-str:normal,$f-s-a:none,$l-h:20);
+          text-align: left;
+        }
+        &>div:nth-child(3){
+          @include flexible ($f-d:row,$f-w:wrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+          width: 90%;
+
+          &>div{
+            margin: 0.5%;
+            width: 20%;
+            @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+            -webkit-box-shadow: inset 2px -1px 45px 37px rgba(255,255,255,1);
+            -moz-box-shadow: inset 2px -1px 45px 37px rgba(255,255,255,1);
+            box-shadow: inset 2px -1px 45px 37px rgba(255,255,255,1);
+            border-radius: 8px;
+
+            &>img{
+              display: block;
+              object-fit: cover;
+              object-position: 50% 50%;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &>.room_view_field{
+    flex:1 1 5%;
+    @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:normal,$a-c:flex-start);
+    border-top:1px solid rgba(100,100,100,0.2);
+    min-height: 50px;
+    &>div{
+      @include flexible ($f-d:row,$f-w:nowrap,$j-c:flex-start,$a-i:center,$a-c:center);
+    }
+    &>div:nth-child(1){
+      flex:1 1 5%;
+      margin: 0 0 0 30px;
+    }
+    &>div:nth-child(2){
+      flex:1 1 5%;
+      margin: 0 5px 0 0;
+    }
+    &>div:nth-child(3){
+      flex:1 1 85%;
+    }
+    &>div:nth-child(4){
+      flex:1 1 5%;
+      margin: 0 15px 0 20px;
+    }
+  }
+}
+//===========================>
+.glu{
+  @include flexible ($f-d:row,$f-w:nowrap,$j-c:center,$a-i:center,$a-c:center);
+
+  width: 100%;
+  height: 90%;
+  color: $MyGray;
+
+  font-size: 2em;
+
+  &>span:nth-child(1){
+    @include myAnimation($a-name:blinker,$a-dura:0.5s,$a-tim-fu:linear,$a-repeat:infinite,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:none);
+
+  }
+  &>span:nth-child(2){
+    @include myAnimation($a-name:blinker,$a-dura:0.5s,$a-tim-fu:linear,$a-repeat:infinite,$a-go-back:normal,$a-pause:running,$a-delay:0,$a-fill:none);
+  }
+
+
+}
+//===========================>
+.disable{
+  display: none;
+}
+@keyframes bee {
+  0%{
+    top:50%;
+    left: 110%;
+  }
+  50%{
+    top:100%;
+    left: 110%;
+  }
+  100%{
+    top:100%;
+    left: 50%;
+  }
+
+}
+@keyframes aft {
+  0%{
+    top:50%;
+    right: 110%;
+  }
+  50%{
+    top:100%;
+    right: 110%;
+  }
+  100%{
+    top:100%;
+    right: 50%;
+  }
+
+}
+@keyframes beeBack {
+  0%{
+    top:100%;
+    left: 50%;
+  }
+  50%{
+    top:100%;
+    left: 110%;
+  }
+  100%{
+    top:50%;
+    left: 110%;
+  }
+
+}
+@keyframes aftBack {
+  0%{
+    top:100%;
+    right: 50%;
+  }
+  50%{
+    top:100%;
+    right: 110%;
+  }
+  100%{
+    top:50%;
+    right: 110%;
+  }
+
+}
+@keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
